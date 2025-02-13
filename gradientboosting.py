@@ -10,6 +10,7 @@ from sklearn.ensemble import GradientBoostingRegressor
 import datetime
 
 # Data Loading and Filtering
+# Need a .csv file in order to run this program
 data = pd.read_csv('used_cars.csv')
 data = data[(data['price'] > 500) & (data['price'] < 80000)]  # Filtering abnormal prices
 data = data[['price', 'year', 'manufacturer', 'fuel', 'odometer', 'transmission', 'drive', 'paint_color', 'type']]  # Remove unnecessary columns
